@@ -1,11 +1,9 @@
 #include <stdio.h>
 
 /**
- *
- * 4-puts.c - Hello World using puts
+ * main - Entry point
  *
  * Return: Always 0 (Success)
- *
  */
 
 int main(void)
