@@ -2,9 +2,9 @@
 #include <unistd.h>
 
 /**
+ * main - entry point
  *
- * 101-quote.c - Prints a string to stderr
- *
+ * Return: Always 1 (success)
  */
 
 int main(void)

@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-/*
+/**
+ * main - Entry point
  *
- * 6-size.c - Prints the size of all common data types
- *
+ * Return: Always 0 (success)
  */
 
 int main(void)

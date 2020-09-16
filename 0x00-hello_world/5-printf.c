@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-/*
+/**
+ * main - Entry point
  *
- * 5-printf.c - Hello World using printf
- *
+ * Return: Always 0 (success)
  */
 
 int main(void)
