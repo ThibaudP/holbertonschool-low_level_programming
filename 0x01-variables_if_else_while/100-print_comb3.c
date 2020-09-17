@@ -15,7 +15,7 @@ int main(void)
 	while (i < 9)
 	{
 		j = i + 1;
-		
+
 		while (j < 10)
 		{
 			putchar(i + '0');
