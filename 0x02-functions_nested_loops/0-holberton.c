@@ -1,17 +1,6 @@
 #include <stdio.h>
-
-/**
- * _putchar - Prints "Holberton"
- *
- * Return: Always 0
- */
-
-int _putchar(void)
-{
-	printf("Holberton\n");
-	return (0);
-}
-
+#include <string.h>
+#include "holberton.h"
 
 /**
  * main - Entry point
@@ -21,6 +10,14 @@ int _putchar(void)
 
 int main(void)
 {
-	_putchar();
+	char c[] = "Holberton\n";
+	unsigned int i = 0;
+	/* int len = strlen(c); */
+
+	while (i < strlen(c))
+	{
+		_putchar(c[i]);
+		i++;
+	}
 	return (0);
 }
