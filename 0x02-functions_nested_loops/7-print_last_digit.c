@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "holberton.h"
 
 /**
@@ -10,17 +9,10 @@
 
 int print_last_digit(int n)
 {
-	int last, vabs;
-
 	if (n < 0)
 	{
-		vabs = n * (-1);
+		n = n * -1;
 	}
-	else
-	{
-		vabs = n;
-	}
-	last = vabs % 10;
-	_putchar(last + '0');
-	return (last);
+	_putchar((n % 10) + '0');
+	return (n % 10);
 }
