@@ -1,8 +1,7 @@
-#include <stdio.h>
 #include "holberton.h"
 
 /**
- * printçtimes_table - Prints all the multiplication tables
+ * print_times_table - Prints all the multiplication tables
  * @n: an int
  */
 
