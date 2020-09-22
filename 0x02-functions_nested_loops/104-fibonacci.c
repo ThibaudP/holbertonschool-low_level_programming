@@ -40,19 +40,21 @@ int main(void)
 	{
 		cur_half1 = prepre_half1 + pre_half1;
 		cur_half2 = prepre_half2 + pre_half2;
+
 		if (prepre_half2 + pre_half2 > 999999999)
 		{
 			cur_half1 = cur_half1 + 1;
 			cur_half2 = cur_half2 % 1000000000;
 		}
+
 		printf("%lu%lu", cur_half1, cur_half2);
-		if (i != 98)
-			printf(", ");
+
+		printf((i != 98) ? ", " : "\n");
+
 		prepre_half1 = pre_half1;
 		prepre_half2 = pre_half2;
 		pre_half1 = cur_half1;
 		pre_half2 = cur_half2;
 	}
-	printf("\n");
 	return (0);
 }
