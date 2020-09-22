@@ -5,7 +5,7 @@
 /**
  * main - Compute the first 98 Fibonacci numbers without using long longs
  *
- * 1st for loop computes #2-#92 (93 overflows the unsigned int)
+ * 1st for loop computes #2-#92 (93 overflows the unsigned long)
  * Setup for 2nd loop splits the previous value & the previous previous
  * at an arbitrary 1 billion (plenty enough to not overflow either half).
  * Both halves are then added together separately. If the 2nd half overflows
