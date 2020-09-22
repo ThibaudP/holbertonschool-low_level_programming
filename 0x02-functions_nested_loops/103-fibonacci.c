@@ -23,7 +23,8 @@ int main(void)
 		prepre = pre;
 		pre = cur;
 		
-		tot = tot + cur;
+		if (cur % 2 == 0)
+			tot = tot + cur;
 
 		if (cur > 4000000)
 		{
