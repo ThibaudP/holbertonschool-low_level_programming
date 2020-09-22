@@ -3,16 +3,16 @@
 #include "holberton.h"
 
 /**
- * natural - prints the sum of all the multiples of 3 and 4 under 1024 excl.
+ * main - Entry point
  *
  * Return: Always 0
  */
 
-void natural(void)
+int main(void)
 {
 	int i, tot;
 
-	for (i = 0; (i < 1024); i++)
+	for (i = 0; i < 1024; i++)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
 		{
@@ -20,4 +20,5 @@ void natural(void)
 		}
 	}
 	printf("%d\n", tot);
+	return (0);
 }
