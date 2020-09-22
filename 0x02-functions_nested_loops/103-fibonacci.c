@@ -3,7 +3,7 @@
 #include "holberton.h"
 
 /**
- * natural - prints the sum of all the multiples of 3 and 4 under 1024 excl.
+ * main - Entry point
  *
  * Return: Always 0
  */
@@ -17,22 +17,15 @@ int main(void)
 
 	prepre = j;
 	pre = k;
-	while (i < 48)
+	while (i < 34)
 	{
 		cur = prepre + pre;
 		prepre = pre;
 		pre = cur;
-		
 		if (cur % 2 == 0)
 			tot = tot + cur;
-
-		if (cur > 4000000)
-		{
-			printf("%lu\n", tot);
-			return (0);
-		}
-
 		i++;
 	}
+	printf("%lu\n", tot);
 	return (0);
 }
