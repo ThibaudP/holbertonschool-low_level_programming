@@ -10,14 +10,14 @@
 
 int main(void)
 {
-	char c[] = "Holberton\n";
-	unsigned int i = 0;
-	/* int len = strlen(c); */
+	char c[] = "Holberton";
+	int i = 0;
 
-	while (i < strlen(c))
+	while (i < 9)
 	{
 		_putchar(c[i]);
 		i++;
 	}
+	_putchar('\n');
 	return (0);
 }
