@@ -18,7 +18,8 @@ int main(void)
 	prepre = j;
 	pre = k;
 	tot = k;
-	while (i < 34)
+	cur = k;
+	while (cur < 4000000)
 	{
 		cur = prepre + pre;
 		prepre = pre;
