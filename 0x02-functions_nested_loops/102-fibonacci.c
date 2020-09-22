@@ -3,7 +3,7 @@
 #include "holberton.h"
 
 /**
- * natural - prints the sum of all the multiples of 3 and 4 under 1024 excl.
+ * main - Entry point
  *
  * Return: Always 0
  */
