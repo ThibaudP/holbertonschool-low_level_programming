@@ -17,6 +17,7 @@ int main(void)
 
 	prepre = j;
 	pre = k;
+	tot = k;
 	while (i < 34)
 	{
 		cur = prepre + pre;
