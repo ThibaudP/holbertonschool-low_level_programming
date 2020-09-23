@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 #include "holberton.h"
 
 /**
@@ -11,12 +10,11 @@
 int main(void)
 {
 	char c[] = "Holberton";
-	int i = 0;
+	int i;
 
-	while (i < 9)
+	for (i = 0; i < 9; i++)
 	{
 		_putchar(c[i]);
-		i++;
 	}
 	_putchar('\n');
 	return (0);
