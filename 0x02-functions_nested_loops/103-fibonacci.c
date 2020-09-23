@@ -10,24 +10,20 @@
 
 int main(void)
 {
-	unsigned long prepre, pre, cur, tot;
-	int i = 0;
-	int j = 1;
-	int k = 2;
+	unsigned long pp = 1, p = 2, cur, sum;
+	int i;
 
-	prepre = j;
-	pre = k;
-	tot = k;
-	cur = k;
+	cur = p;
+	sum = cur;
 	while (cur < 4000000)
 	{
-		cur = prepre + pre;
-		prepre = pre;
-		pre = cur;
+		cur = pp + p;
+		pp = p;
+		p = cur;
 		if (cur % 2 == 0)
-			tot = tot + cur;
+			sum += cur;
 		i++;
 	}
-	printf("%lu\n", tot);
+	printf("%lu\n", sum);
 	return (0);
 }
