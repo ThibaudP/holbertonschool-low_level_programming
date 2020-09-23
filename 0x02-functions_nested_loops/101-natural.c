@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <string.h>
-#include "holberton.h"
 
 /**
  * main - Entry point
@@ -10,15 +8,15 @@
 
 int main(void)
 {
-	int i, tot;
+	int i, sum;
 
 	for (i = 0; i < 1024; i++)
 	{
 		if (i % 3 == 0 || i % 5 == 0)
 		{
-			tot = tot + i;
+			sum = sum + i;
 		}
 	}
-	printf("%i\n", tot);
+	printf("%i\n", sum);
 	return (0);
 }
