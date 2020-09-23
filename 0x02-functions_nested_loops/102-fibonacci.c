@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <string.h>
-#include "holberton.h"
 
 /**
  * main - Entry point
@@ -10,26 +8,18 @@
 
 int main(void)
 {
-	unsigned long prepre, pre, cur;
-	int i = 0;
-	int j = 1;
-	int k = 2;
+	unsigned long pp = 1, p = 2, cur;
+	int i;
 
-	printf("%d, ", j);
-	printf("%d, ", k);
+	printf("1, 2, ");
 
-	prepre = j;
-	pre = k;
-	while (i < 48)
+	for (i = 0; i < 48; i++)
 	{
-		cur = prepre + pre;
-		prepre = pre;
-		pre = cur;
-		if (i == 47)
-			printf("%lu\n", cur);
-		else
-			printf("%lu, ", cur);
-		i++;
+		cur = pp + p;	
+		printf("%lu", cur);
+		printf ((i == 47) ? "\n" : ", ");
+		pp = p;
+		p = cur;
 	}
 	return (0);
 }
