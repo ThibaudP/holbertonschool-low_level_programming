@@ -15,9 +15,9 @@ int main(void)
 
 	for (i = 0; i < 48; i++)
 	{
-		cur = pp + p;	
+		cur = pp + p;
 		printf("%lu", cur);
-		printf ((i == 47) ? "\n" : ", ");
+		printf((i == 47) ? "\n" : ", ");
 		pp = p;
 		p = cur;
 	}
