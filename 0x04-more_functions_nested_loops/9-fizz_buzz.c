@@ -4,7 +4,7 @@
  * main - Entry point, prints numbers from 1 to 100
  * if number is a multiple of 3 print Fizz instead
  * if number is a multiple of 3 and 5 print FizzBuzz instead
- * 
+ *
  * Return: Always 0
  */
 
