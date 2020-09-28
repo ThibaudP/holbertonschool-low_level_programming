@@ -20,17 +20,17 @@ int _strlen(char *s)
 }
 
 /**
- * _puts - Prints a string to stdout
+ * print_rev - Prints a string in reverse
  *
  * @str: pointer to a string
  */
 
-void _puts(char *str)
+void print_rev(char *str)
 {
 	int i, len;
 
 	len = _strlen(str);
-	for (i = 0; i < len; i++)
+	for (i = len; i >= 0; i--)
 	{
 		_putchar(str[i]);
 	}
