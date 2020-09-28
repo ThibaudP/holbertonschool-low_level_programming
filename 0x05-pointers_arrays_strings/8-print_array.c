@@ -20,7 +20,7 @@ int _strlen(char *s)
 }
 
 /**
- * print_arry - prints an array
+ * print_array - prints an array
  *
  * @a: an array
  * @n: number of elements to be printed
@@ -29,7 +29,7 @@ int _strlen(char *s)
 void print_array(int *a, int n)
 {
 	int i;
-	
+
 	for (i = 0; i < n; i++)
 	{
 		printf("%i", a[i]);
