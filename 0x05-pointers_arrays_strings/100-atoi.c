@@ -32,29 +32,6 @@ int _isdigit(int c)
 }
 
 /**
- * _pow - Returns n to the power exp
- *
- * @n: the number
- * @exp: the power
- *
- * Return: n ^ exp
- */
-
-int _pow(int n, int exp)
-{
-	int i, res = n;
-
-	for (i = 1; i < exp; i++)
-	{
-		res *= n;
-	}
-	if (exp == 0)
-		res = 1;
-	return (res);
-}
-
-
-/**
  * _atoi - converts the first number in a string to an int
  *
  * @s: input string
@@ -64,19 +41,27 @@ int _pow(int n, int exp)
 
 int _atoi(char *s)
 {
-	int i, res = 0, len = 0;
-	int 
+	int i, c, len, res = 0;
 
-	for (i = 0; i < _strlen(s); i++)
+	len = _strlen(s);
+
+	for (i = 0; i < len; i++)
+	{
+		if (s[i] == '-')
+			c++;
+
 		if (_isdigit(s[i]))
 			break;
+	}
 
 	while (_isdigit(s[i]))
 	{
-		res *= 10 + ((s[i] - 48);
+		res = (res * 10) + ((s[i] - 48));
 		i++;
 	}
 
+	if (c % 2 != 0)
+		res = -res;
 
 	return (res);
 }
