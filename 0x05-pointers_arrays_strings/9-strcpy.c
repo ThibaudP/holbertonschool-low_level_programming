@@ -20,10 +20,12 @@ int _strlen(char *s)
 }
 
 /**
- * print_array - prints an array
+ * _strcpy - copies one string to another
  *
- * @a: an array
- * @n: number of elements to be printed
+ * @dest: destination string
+ * @src: source string
+ *
+ * Return: pointer to the destination string
  */
 
 char *_strcpy(char *dest, char *src)
@@ -34,5 +36,7 @@ char *_strcpy(char *dest, char *src)
 	{
 		dest[i] = src[i];
 	}
+	if (i == _strlen(src))
+		_putchar('\0');
 	return (dest);
 }
