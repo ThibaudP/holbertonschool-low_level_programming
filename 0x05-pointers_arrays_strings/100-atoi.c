@@ -84,7 +84,7 @@ int _atoi(char *s)
 	}
 	for (j = 0; j < len; j++)
 	{
-		res = res + ((*(beg + j) - 48) * _pow(10,len - (j + 1)));
+		res = res + ((*(beg + j) - 48) * _pow(10, len - (j + 1)));
 	}
 
 	if (beg != s && *(beg - 1) == '-')
