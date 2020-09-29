@@ -15,14 +15,14 @@ int main(void)
 
 	srand(time(0));
 
-	for (i = 0; sum < (2772 - 122); i++)
+	for (i = 0; sum < (2772 - 123); i++)
 	{
 		val = rand() % 62;
 		pwd[i] = arr[val];
 		sum += pwd[i];
 	}
 	pwd[i] = 2772 - sum;
-
+	pwd[i + 1] = '\0';
 	printf("%s", pwd);
 	return (0);
 }
