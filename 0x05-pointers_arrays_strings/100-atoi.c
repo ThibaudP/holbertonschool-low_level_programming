@@ -54,14 +54,16 @@ int _atoi(char *s)
 			break;
 	}
 
+	if (c % 2 != 0)
+		c = -1;
+	else
+		c = 1;
+
 	while (_isdigit(s[i]))
 	{
-		res = (res * 10) + ((s[i] - 48));
+		res = (res * 10) + (c * ((s[i] - 48)));
 		i++;
 	}
-
-	if (c % 2 != 0)
-		res = -res;
 
 	return (res);
 }
