@@ -41,7 +41,7 @@ int _isdigit(int c)
 
 int _atoi(char *s)
 {
-	int i, c, len, res = 0;
+	int i, c = 0, len, res = 0;
 
 	len = _strlen(s);
 
