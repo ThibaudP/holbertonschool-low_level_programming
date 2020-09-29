@@ -64,13 +64,14 @@ int _pow(int n, int exp)
 
 int _atoi(char *s)
 {
-	int i, j, beg, res = 0, len = 0;
+	int i, j, emp = 1, beg, res = 0, len = 0;
 
 	for (i = 0; i < _strlen(s); i++)
 	{
 		if (_isdigit(s[i]))
 		{
 			beg = i;
+			emp = 0;
 			break;
 		}
 	}
@@ -88,5 +89,5 @@ int _atoi(char *s)
 	if ((beg - 1) >= 0 && s[beg - 1] == '-')
 		res = -res;
 
-	return (res);
+	return ((emp == 0) ? res : 0);
 }
