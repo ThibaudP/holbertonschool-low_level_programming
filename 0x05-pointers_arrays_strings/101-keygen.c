@@ -17,7 +17,7 @@ int main(void)
 
 	for (i = 0; sum < (2772 - 122); i++)
 	{
-		val = rand() % 63;
+		val = rand() % 62;
 		pwd[i] = arr[val];
 		sum += pwd[i];
 	}
