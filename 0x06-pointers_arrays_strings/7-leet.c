@@ -20,7 +20,10 @@ char *leet(char *s)
 		while (src[j])
 		{
 			if (s[i] == src[j])
+			{
 				s[i] = dest[j];
+				break;
+			}
 			j++;
 		}
 		i++;
