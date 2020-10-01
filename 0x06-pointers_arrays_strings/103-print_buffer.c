@@ -72,7 +72,7 @@ void print_bline(char *b, int size, int byte)
 void print_buffer(char *b, int size)
 {
 	int i = 0;
-	
+
 	for (i = 0; i < size; i += 10)
 	{
 		print_bline(b, size, i);
