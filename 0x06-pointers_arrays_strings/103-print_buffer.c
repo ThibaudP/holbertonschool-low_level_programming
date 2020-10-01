@@ -28,7 +28,7 @@ int is_printable(char c)
 
 void print_bline(char *b, int size, int byte)
 {
-	int i, j;
+	int i;
 
 	printf("%08x: ", byte);
 
@@ -71,7 +71,7 @@ void print_bline(char *b, int size, int byte)
 
 void print_buffer(char *b, int size)
 {
-	int i = 0;
+	int i;
 
 	if (size <= 0)
 		printf("\n");
