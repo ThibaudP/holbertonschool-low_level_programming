@@ -73,8 +73,13 @@ void print_buffer(char *b, int size)
 {
 	int i = 0;
 
-	for (i = 0; i < size; i += 10)
+	if (size <= 0)
+		printf("\n");
+	else
 	{
-		print_bline(b, size, i);
+		for (i = 0; i < size; i += 10)
+		{
+			print_bline(b, size, i);
+		}
 	}
 }
