@@ -19,7 +19,7 @@ int _strlen(char *s)
 }
 
 /**
- * _strcat - Concatenates 2 strings 
+ * _strcat - Concatenates 2 strings
  *
  * @dest: 2nd string & result
  * @src: 1st string
@@ -31,7 +31,7 @@ char *_strcat(char *dest, char *src)
 {
 	int i = 0, n = _strlen(dest);
 
-	for (i = 0; i < (n + 1) && src[i] != '\0'; i++)
+	for (i = 0; i <= n && src[i] != '\0'; i++)
 		dest[i + n] = src[i];
 
 	dest[i + n] = '\0';
