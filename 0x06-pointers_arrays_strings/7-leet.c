@@ -1,18 +1,6 @@
 #include "holberton.h"
 
 /**
- * _islower - Checks if a char is lowercase
- * @c: a char
- *
- * Return: 1 if c is lowercase, 0 if not
- */
-
-int _islower(int c)
-{
-	return ((c >= 'a' && c <= 'z') ? (1) : (0));
-}
-
-/**
  * leet - translates string to leetspeak
  *
  * @s: a string
@@ -22,7 +10,7 @@ int _islower(int c)
 
 char *leet(char *s)
 {
-	int i = 0, j = 0;
+	int i = 0, j;
 	char *src = "aeotlAEOTL";
 	char *dest = "4307143071";
 
