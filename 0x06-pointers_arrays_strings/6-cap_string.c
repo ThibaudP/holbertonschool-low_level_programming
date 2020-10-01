@@ -13,7 +13,7 @@ int _islower(int c)
 }
 
 /**
- * _issepchar - Checks if a char is a separator char
+ * issepchar - Checks if a char is a separator char
  * @c: a char
  *
  * Return: 1 if c is a sep char, 0 if not
@@ -51,7 +51,7 @@ char *cap_string(char *s)
 
 	while (s[i])
 	{
-		if (issepchar(s[i - 1]) && _islower(s[i]))
+		if ((i == 0 || issepchar(s[i - 1])) && _islower(s[i]))
 			s[i] -= 32;
 		i++;
 	}
