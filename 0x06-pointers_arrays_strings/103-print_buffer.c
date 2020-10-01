@@ -52,8 +52,6 @@ void print_bline(char *b, int size, int byte)
 			else
 				printf(".");
 		}
-		else
-			printf(" ");
 	}
 
 	printf("\n");
