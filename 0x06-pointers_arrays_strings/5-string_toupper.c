@@ -24,9 +24,12 @@ char *string_toupper(char *s)
 {
 	int i = 0;
 
-	while (s[i++])
+	while (s[i])
+	{
 		if (_islower(s[i]))
 			s[i] -= 32;
+		i++;
+	}
 
 	return (s);
 }
