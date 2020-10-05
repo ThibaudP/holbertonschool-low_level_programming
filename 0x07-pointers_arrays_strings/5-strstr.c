@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stddef.h>
 #include "holberton.h"
 
 /**
@@ -14,27 +13,27 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	unsigned int i, j;
+	unsigned int i = 0, j = 0, len = 0;
+
+	while (needle[len])
+		len++;
 
 	while (haystack[i])
 	{
-		if (haystack[i] == needle[0])
+		while ((haystack[i] == needle[0]) && needle[j])
 		{
-			while (needle[j] && (haystack[i] == needle[0]))
-			{
-				if (haystack[i + j] == needle[j])
-					j++;
-				else
-					break;
-			}
-
-			{
-				i++;
-				j = 0;
-			}
+			if (haystack[i + j] == needle[j])
+				j++;
 			else
-				return (haystack + i);
+				break;
 		}
+		if (j < len)
+		{
+			i++;
+			j = 0;
+		}
+		else
+			return (haystack + i);
 	}
 	return (0);
 }
