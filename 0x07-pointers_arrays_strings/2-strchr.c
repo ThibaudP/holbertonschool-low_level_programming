@@ -1,4 +1,3 @@
-#include <stddef.h>
 #include "holberton.h"
 
 /**
@@ -14,11 +13,10 @@ char *_strchr(char *s, char c)
 {
 	unsigned int i;
 
-	while (s[i])
+	while (s[i++])
 	{
 		if (s[i] == c)
 			return (s + i);
-		i++;
 	}
-	return (NULL);
+	return (0);
 }
