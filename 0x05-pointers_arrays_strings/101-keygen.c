@@ -15,7 +15,7 @@ int main(void)
 
 	srand(time(0));
 
-	for (i = 0; sum < (2772 - 123); i++)
+	for (i = 0; sum < (2772 - 122); i++)
 	{
 		val = rand() % 62;
 		pwd[i] = arr[val];
