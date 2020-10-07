@@ -29,6 +29,6 @@ int _sqrt_test(int x, int y)
 int _sqrt_recursion(int n)
 {
 	if (n <= 0)
-		return (0);
+		return (-1);
 	return (_sqrt_test(1, n));
 }
