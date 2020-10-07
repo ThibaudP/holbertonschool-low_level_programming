@@ -47,7 +47,7 @@ int is_palindrome(char *s)
 {
 	int i = 0;
 	int j = _strlen_recursion(s);
-	
+
 	if (j == 0)
 		return (1);
 
