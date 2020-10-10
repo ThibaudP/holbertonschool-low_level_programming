@@ -7,7 +7,7 @@
  * @argc: number of args
  * @argv: array of args
  *
- * Return: 0 if successful, 1 if error 
+ * Return: 0 if successful, 1 if error
  */
 
 int main(int argc, char **argv)
