@@ -3,7 +3,7 @@
 #include "holberton.h"
 
 /**
- * main - Entry point, counts the coins needed to reach sum 
+ * main - Entry point, counts the coins needed to reach sum
  *
  * @argc: number of args
  * @argv: array of args
@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		return (1);
 	}
-		
+
 	if (atoi(argv[1]) < 0)
 	{
 		printf("0\n");
