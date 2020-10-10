@@ -8,7 +8,7 @@
  * @argc: number of args
  * @argv: array of args
  *
- * Return: Always 1
+ * Return: Always 0
  */
 
 int main(int argc, char *argv[])
@@ -20,5 +20,5 @@ int main(int argc, char *argv[])
 	}
 
 	printf("%i\n", atoi(argv[1]) * atoi(argv[2]));
-	return (1);
+	return (0);
 }

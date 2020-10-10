@@ -8,7 +8,7 @@
  * @argc: number of args
  * @argv: array of args
  *
- * Return: Always 1
+ * Return: 0 if successful, 1 if Error
  */
 
 int main(int argc, char *argv[])
@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	if (argc < 2)
 	{
 		printf("0\n");
-		return (1);
+		return (0);
 	}
 
 	for (i = 1; i < argc; i++)
@@ -37,5 +37,5 @@ int main(int argc, char *argv[])
 
 
 	printf("%i\n", sum);
-	return (1);
+	return (0);
 }

@@ -8,7 +8,7 @@
  * @argc: number of args
  * @argv: array of args
  *
- * Return: Always 1
+ * Return: 0 if successful, 1 if error 
  */
 
 int main(int argc, char **argv)
@@ -25,7 +25,7 @@ int main(int argc, char **argv)
 	if (atoi(argv[1]) < 0)
 	{
 		printf("0\n");
-		return (1);
+		return (0);
 	}
 
 	sum = atoi(argv[1]);
@@ -39,5 +39,5 @@ int main(int argc, char **argv)
 	}
 
 	printf("%i\n", tot);
-	return (1);
+	return (0);
 }

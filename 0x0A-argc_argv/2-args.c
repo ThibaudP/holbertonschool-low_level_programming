@@ -7,7 +7,7 @@
  * @argc: number of args
  * @argv: array of args
  *
- * Return: Always 1
+ * Return: Always 0
  */
 
 int main(int argc, char *argv[] __attribute__((unused)))
@@ -16,5 +16,5 @@ int main(int argc, char *argv[] __attribute__((unused)))
 
 	for (i = 0; i < argc; i++)
 		printf("%s\n", argv[i]);
-	return (1);
+	return (0);
 }

@@ -7,7 +7,7 @@
  * @argc: number of args
  * @argv: array of args
  *
- * Return: Always 1
+ * Return: Always 0
  */
 
 int main(int argc __attribute__((unused)), char *argv[])
