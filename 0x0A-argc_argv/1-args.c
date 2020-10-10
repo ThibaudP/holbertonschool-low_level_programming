@@ -8,11 +8,11 @@
  * @argc: number of args
  * @argv: array of args
  *
- * Return: Always 1
+ * Return: Always 0
  */
 
 int main(int argc, char *argv[] __attribute__((unused)))
 {
 	printf("%i\n", argc - 1);
-	return (1);
+	return (0);
 }
