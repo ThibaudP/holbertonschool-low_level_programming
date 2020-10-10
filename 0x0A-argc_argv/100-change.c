@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "holberton.h"
 
 /**
  * main - Entry point, counts the coins needed to reach sum
@@ -22,20 +21,17 @@ int main(int argc, char **argv)
 		return (1);
 	}
 
-	if (atoi(argv[1]) < 0)
-	{
-		printf("0\n");
-		return (1);
-	}
-
 	sum = atoi(argv[1]);
 
-	for (i = 0; coins[i]; i++)
+	if (sum >= 0)
 	{
-		nb = sum / coins[i];
-		if (nb > 0)
-			sum %= (nb * coins[i]);
-		tot += nb;
+		for (i = 0; coins[i]; i++)
+		{
+			nb = sum / coins[i];
+			if (nb > 0)
+				sum %= (nb * coins[i]);
+			tot += nb;
+		}
 	}
 
 	printf("%i\n", tot);
