@@ -98,7 +98,7 @@ char **strtow(char *str)
 			i++;
 		else
 		{
-			res[j] = malloc(sizeof(char) * word_len(str + i) + 1);
+			res[j] = malloc(sizeof(char) * (1 + word_len(str + i)));
 			if (res[j] == NULL)
 			{
 				free_2d(res, cnt);
@@ -107,7 +107,9 @@ char **strtow(char *str)
 			k = 0;
 			while (str[i] && str[i] != ' ')
 			{
-				res[j][k++] = str[i++];
+				res[j][k] = str[i];
+				k++;
+				i++;
 			}
 			res[j][k] = '\0';
 			j++;
