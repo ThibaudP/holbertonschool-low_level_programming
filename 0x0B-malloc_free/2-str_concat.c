@@ -38,7 +38,7 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		len2 = 0;
 	
-	res = malloc(sizeof(char) * (len1 + len2));
+	res = malloc(sizeof(char) * (len1 + len2 + 1));
 	if (res == NULL)
 		return (NULL);
 
@@ -50,6 +50,8 @@ char *str_concat(char *s1, char *s2)
 		res[i] = s2[j];
 		i++;
 	}
+
+	res[i + 1] = '\0';
 
 	return (res);
 }
