@@ -29,21 +29,19 @@ int _strlen(char *s)
 
 char *_strdup(char *str)
 {
-	unsigned int i;
+	unsigned int i, len;
 	char *dup;
 
 	if (str == NULL)
 		return (NULL);
+	
+	len = _strlen(str);
 
-	while (1)
-	{
-		dup = malloc(sizeof(char) * _strlen(str));
-		if (dup == NULL)
-			return (NULL);
-		break;
-	}
+	dup = malloc(sizeof(char) * len);
+	if (dup == NULL)
+		return (NULL);
 
-	for (i = 0; str[i]; i++)
+	for (i = 0; i < len + 1; i++)
 		dup[i] = str[i];
 
 	return (dup);
