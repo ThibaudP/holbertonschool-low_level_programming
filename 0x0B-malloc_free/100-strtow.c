@@ -18,9 +18,9 @@ int word_cnt(char *str)
 			i++;
 		else
 		{
-			cnt++;
 			while (str[i] && str[i] != ' ')
 				i++;
+			cnt++;
 		}
 	}
 	return (cnt);
@@ -47,10 +47,6 @@ int word_len(char *str)
 	return (i);
 }
 
-
-
-#include "holberton.h"
-
 /**
  * free_2d- de-allocates a 2D array in case of failure
  *
@@ -62,9 +58,10 @@ void free_2d(char **grid, int height)
 {
 	int i;
 
-	for (i = 0; i < height; i++)
+	while (height >= 0)
 	{
-		free(grid[i]);
+		free(grid[height]);
+		height--;
 	}
 
 	free(grid);
