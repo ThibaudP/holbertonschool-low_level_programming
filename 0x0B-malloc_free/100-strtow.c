@@ -107,9 +107,7 @@ char **strtow(char *str)
 			k = 0;
 			while (str[i] && str[i] != ' ')
 			{
-				res[j][k] = str[i];
-				k++;
-				i++;
+				res[j][k++] = str[i++];
 			}
 			res[j][k] = '\0';
 			j++;
