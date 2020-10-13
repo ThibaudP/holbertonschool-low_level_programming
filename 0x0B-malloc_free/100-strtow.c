@@ -86,7 +86,7 @@ char **strtow(char *str)
 	if (cnt == 0)
 		return (NULL);
 
-	res = malloc(sizeof(char *) * cnt);
+	res = malloc(sizeof(char *) * (cnt + 1));
 	if (res == NULL)
 		return (NULL);
 
