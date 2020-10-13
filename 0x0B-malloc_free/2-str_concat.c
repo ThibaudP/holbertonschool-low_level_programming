@@ -38,13 +38,9 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		len2 = 0;
 	
-	while (1)
-	{
-		res = malloc(sizeof(char) * (len1 + len2));
-		if (res == NULL)
-			return (NULL);
-		break;
-	}
+	res = malloc(sizeof(char) * (len1 + len2));
+	if (res == NULL)
+		return (NULL);
 
 	for (i = 0; s1[i]; i++)
 		res[i] = s1[i];
