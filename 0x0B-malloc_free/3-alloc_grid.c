@@ -9,7 +9,7 @@
 
 void free_arr(int **arr, int i)
 {
-	while (i > 0)
+	while (i >= 0)
 	{
 		free(arr[i]);
 		i--;
