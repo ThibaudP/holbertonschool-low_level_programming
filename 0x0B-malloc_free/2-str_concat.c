@@ -60,7 +60,7 @@ char *_strdup(char *str)
 
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int i, j;
+	unsigned int i = 0, j;
 	char *res;
 
 	if (s1 == NULL && s2 != NULL)
