@@ -78,7 +78,7 @@ char **strtow(char *str)
 	int i = 0, j = 0, k, cnt;
 	char **res;
 
-	if (str[0] == '\0' || str == NULL)
+	if (str == NULL || str[0] == '\0')
 		return (NULL);
 
 	cnt = word_cnt(str);
