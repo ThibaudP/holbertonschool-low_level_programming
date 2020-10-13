@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * word_count  - Counts the number of words (sep = ' ')
+ * word_cnt - Counts the number of words (sep = ' ')
  *
  * @str: a string
  *
@@ -96,7 +96,7 @@ char **strtow(char *str)
 	{
 		if (str[i] == ' ')
 			i++;
-		if (str[i] != ' ')
+		else
 		{
 			res[j] = malloc(sizeof(char) * word_len(str + i) + 1);
 			if (res[j] == NULL)
