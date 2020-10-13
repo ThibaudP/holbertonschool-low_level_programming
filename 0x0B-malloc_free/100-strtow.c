@@ -56,8 +56,6 @@ int word_len(char *str)
 
 void free_2d(char **grid, int height)
 {
-	int i;
-
 	while (height >= 0)
 	{
 		free(grid[height]);
