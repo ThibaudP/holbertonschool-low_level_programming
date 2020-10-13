@@ -12,47 +12,97 @@ int _strlen(char *s)
 {
 	int len = 0;
 
+	if (s == NULL)
+		return (0);
+
 	while (s[len] != '\0')
 		len++;
 
 	return (len);
 }
 
+/**
+ * _strdup - Duplicates a string
+ *
+ * @str: string to be duplicated
+ *
+ * Return: a pointer to the duplicated string
+ */
+
+char *_strdup(char *str)
+{
+	unsigned int i, len;
+	char *dup;
+
+	if (str == NULL)
+		return (NULL);
+
+	len = _strlen(str);
+
+	dup = malloc(sizeof(char) * (len + 1));
+	if (dup == NULL)
+		return (NULL);
+
+	for (i = 0; i < (len + 1); i++)
+		dup[i] = str[i];
+
+	return (dup);
+}
 
 /**
- * alloc_grid - allocates memory for a 2D array 
+ * free_arr - de-allocates a 2D array in case of failure
+ *
+ * @arr: array to deallocate
+ * @i: index of the failure
+ */
+
+void free_arr(int **arr, int i)
+{
+	while (i > 0)
+	{
+		free(arr[i]);
+		i--;
+	}
+
+	free(arr);
+}
+
+
+/**
+ * alloc_grid - Returns pointer to 2D array
  *
  * @width: width of the array
  * @height: height of the array
- * 
- * Return: a pointer to the array 
+ *
+ * Return: a pointer to the array
  */
 
-char **alloc_grid(int width, int height)
+int **alloc_grid(int width, int height)
 {
-	unsigned int i, j;
-	char *res;
+	int i, j;
+	int **arr;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
+	arr = malloc(sizeof(int) * height);
+	if (arr == NULL)
+		return (NULL);
 
-	while (1)
+	for (i = 0; i < height; i++)
 	{
-		res = malloc(sizeof(char) * (_strlen(s1) + _strlen(s2)));
-		if (res == NULL)
-			return ("Error!");
-		break;
+		for (j = 0; j < width; j++)
+		{
+			arr[i] = malloc(sizeof(int) * width);
+			if (arr[i] == NULL)
+			{
+				free_arr(arr, i);
+				return (NULL);
+			}
+
+			arr[i][j] = 0;
+		}
 	}
 
-	for (i = 0; s1[i]; i++)
-		res[i] = s1[i];
-
-	for (j = 0; s2[j]; j++)
-	{
-		res[i] = s2[j];
-		i++;
-	}
-
-	return (res);
+	return (arr);
 }
