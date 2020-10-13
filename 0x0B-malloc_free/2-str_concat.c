@@ -64,8 +64,7 @@ char *str_concat(char *s1, char *s2)
 		return (_strdup(s2));
 	if (s2 == NULL && s1 != NULL)
 		return (_strdup(s1));
-	if (s1 == NULL && s2 == NULL)
-		return ("");
+
 	res = malloc(sizeof(char) * (_strlen(s1) + _strlen(s2) + 1));
 	if (res == NULL)
 		return (NULL);
@@ -80,8 +79,8 @@ char *str_concat(char *s1, char *s2)
 			res[i] = s2[j];
 			i++;
 		}
-	res[i] = '\0';
 	}
+	res[i] = '\0';
 
 	return (res);
 }
