@@ -1,13 +1,13 @@
 #include "holberton.h"
 
 /**
- * free_arr - de-allocates a 2D array in case of failure
+ * free_grid - de-allocates a 2D array in case of failure
  *
  * @arr: array to deallocate
  * @i: index of the failure
  */
 
-void free_arr(int **arr, int i)
+void free_grid(int **arr, int i)
 {
 	while (i >= 0)
 	{
@@ -45,7 +45,7 @@ int **alloc_grid(int width, int height)
 		arr[i] = malloc(sizeof(int) * width);
 		if (arr[i] == NULL)
 		{
-			free_arr(arr, i);
+			free_grid(arr, i);
 			return (NULL);
 		}
 
