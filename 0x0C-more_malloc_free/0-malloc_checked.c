@@ -3,11 +3,10 @@
 #include <stdlib.h>
 
 /**
- * _calloc - Allocates memory w/ malloc\
- * & initialized every item of the array to 0
+ * malloc_checked - Allocates memory w/ malloc\
+ * & returns 98 to stderr if fail
  *
- * @nmemb: number of elements
- * @size: 
+ * @b: size to allocate
  *
  * Return: a pointer
  */
