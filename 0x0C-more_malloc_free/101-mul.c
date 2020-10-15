@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * _puts - Prints a string 
+ * _puts - Prints a string
  *
  * @s: string to print
  */
@@ -40,7 +40,7 @@ int _isnumber(char *s)
 	if (s == NULL)
 		exit98();
 
-	while(s[i])
+	while (s[i])
 	{
 		if (s[i] >= '0' && s[i] <= '9')
 			i++;
