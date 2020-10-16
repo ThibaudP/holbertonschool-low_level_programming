@@ -62,10 +62,10 @@ int _isnumber(char *s)
 
 int main(int argc, char **argv)
 {
-	if (argc != 3 || !_isnumber(argv[1]) || !_isnumber(argv[2]))
-	{
+	char *num1 = argv[1], *num2 = argv[2];
+
+	if (argc != 3 || !_isnumber(num1) || !_isnumber(num2))
 		exit98();
-	}
 
 	return (0);
 }
