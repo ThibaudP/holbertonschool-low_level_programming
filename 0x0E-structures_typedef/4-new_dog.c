@@ -24,7 +24,6 @@ int _strlen(char *s)
 /**
  * new_dog - Creates a struct dog
  *
- * @d: pointer to struct
  * @name: name of the dog
  * @age: age of the dog
  * @owner: name of the owner
