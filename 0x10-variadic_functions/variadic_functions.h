@@ -15,7 +15,7 @@
 typedef struct specs
 {
 	char *spec;
-	char *pfspec;
+	void (*func)(va_list);
 } specs_t;
 
 int _putchar(char c);
