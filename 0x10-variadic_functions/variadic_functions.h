@@ -6,10 +6,10 @@
 #include <stdarg.h>
 
 /**
- * struct op - Struct op
+ * struct specs- Struct specs
  *
- * @op: The operator
- * @f: The function associated
+ * @spec: The char specifier
+ * @func: The function associated
  */
 
 typedef struct specs
