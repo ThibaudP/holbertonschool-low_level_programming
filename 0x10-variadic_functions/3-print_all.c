@@ -42,7 +42,7 @@ void print_float(va_list f)
 void print_string(va_list str)
 {
 	char *arg = va_arg(str, char*);
-	
+
 	if (arg == NULL)
 		arg = "(nil)";
 
