@@ -8,7 +8,7 @@
  * Return: the length of the str string
  */
 
-int	_strlen(const char *str)
+int _strlen(const char *str)
 {
 	int len = 0;
 
@@ -19,33 +19,37 @@ int	_strlen(const char *str)
 }
 
 /**
- * add_node_end - adds a node at the beginning of a linked list
+ * add_node_end - adds a node at the end of a linked list
  *
- * @head: pointer to head of a linked list
+ * @head: pointer to the address to the head of a linked list
  * @str: the str to store in node->str
  *
  * Return: address of new node, or NULL if failure
  */
 
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *last;
-	list_t *node = NULL;
-
-	while (
-
-
+	list_t *node;
+	list_t *current = *head;
 
 	node = malloc(sizeof(list_t));
 	if (node == NULL)
 		return (NULL);
 
 	node->str = strdup(str);
-	if (node->str == NULL)
-		return (NULL);
 	node->len = _strlen(str);
 	node->next = NULL;
-	*head = node;
+
+	if (*head == NULL)
+	{
+		*head = node;
+		return (*head);
+	}
+
+	while (current->next != NULL)
+		current = current->next;
+
+	current->next = node;
 
 	return (node);
 }
