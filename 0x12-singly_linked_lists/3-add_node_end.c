@@ -8,7 +8,7 @@
  * Return: the length of the str string
  */
 
-int	_strlen(char *str)
+int	_strlen(const char *str)
 {
 	int len = 0;
 
@@ -19,7 +19,7 @@ int	_strlen(char *str)
 }
 
 /**
- * add_node - adds a node at the beginning of a linked list
+ * add_node_end - adds a node at the beginning of a linked list
  *
  * @head: pointer to head of a linked list
  * @str: the str to store in node->str
@@ -29,7 +29,12 @@ int	_strlen(char *str)
 
 list_t *add_node(list_t **head, const char *str)
 {
+	list_t *last;
 	list_t *node = NULL;
+
+	while (
+
+
 
 	node = malloc(sizeof(list_t));
 	if (node == NULL)
@@ -39,7 +44,7 @@ list_t *add_node(list_t **head, const char *str)
 	if (node->str == NULL)
 		return (NULL);
 	node->len = _strlen(str);
-	node->next = *head;
+	node->next = NULL;
 	*head = node;
 
 	return (node);
