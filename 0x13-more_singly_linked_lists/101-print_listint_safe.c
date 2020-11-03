@@ -38,7 +38,7 @@ size_t print_listint_safe(const listint_t *head)
 {
 	size_t idx = 0;
 	const listint_t *start = head;
-	
+
 	if (head)
 	{
 		while (head && _islooped(start, head, idx))
