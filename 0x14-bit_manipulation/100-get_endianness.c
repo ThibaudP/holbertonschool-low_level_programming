@@ -3,7 +3,7 @@
 /**
  * get_endianness - checks if numbers are stored as little or big endian
  *
- * Return: 1 if big endian, 0 if little endian 
+ * Return: 1 if big endian, 0 if little endian
  */
 
 int get_endianness(void)
