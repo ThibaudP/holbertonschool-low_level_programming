@@ -12,7 +12,7 @@
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd;
-	ssize_t sta, len = 0;
+	ssize_t sta = 0, len = 0;
 
 	fd = open(filename, O_WRONLY | O_APPEND);
 
