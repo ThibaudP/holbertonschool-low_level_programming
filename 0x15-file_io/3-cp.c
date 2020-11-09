@@ -69,5 +69,5 @@ int main(int ac, char **av)
 			exit_error(100, av, fd_fr);
 	}
 
-	return (-1);
+	return (0);
 }
