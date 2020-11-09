@@ -65,6 +65,8 @@ int main(int ac, char **av)
 			if (close(fd_to) == -1)
 				exit_error(100, av, fd_to);
 		}
+		else
+			exit_error(99, av, 0);
 
 		if (close(fd_fr) == -1)
 			exit_error(100, av, fd_fr);
