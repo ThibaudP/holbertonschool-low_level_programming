@@ -47,30 +47,29 @@ int main(int ac, char **av)
 		exit_error(97, av, 0);
 
 	fd_fr = open(av[1], O_RDONLY);
-	if (fd_fr != -1)
+	if (fd_fr == -1)
+		exit_error(98, av, 0);
+
+	fd_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	if (fd_to == -1)
+		exit_error(99, av, 0);
+	
+	while ((rd_len = read(fd_fr, buf, 1024)) != 0)
 	{
-		fd_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-		if (fd_to != -1)
-		{
-			while ((rd_len = read(fd_fr, buf, 1024)) != 0)
-			{
-				if (rd_len == -1)
-					exit_error(98, av, 0);
+		if (rd_len == -1)
+			exit_error(98, av, 0);
 
-				wr_sta = write(fd_to, buf, rd_len);
+		wr_sta = write(fd_to, buf, rd_len);
 
-				if (wr_sta == -1 || wr_sta != rd_len)
-					exit_error(99, av, 0);
-			}
-			if (close(fd_to) == -1)
-				exit_error(100, av, fd_to);
-		}
-		else
+		if (wr_sta == -1 || wr_sta != rd_len)
 			exit_error(99, av, 0);
-
-		if (close(fd_fr) == -1)
-			exit_error(100, av, fd_fr);
 	}
+	
+	if (close(fd_to) == -1)
+		exit_error(100, av, fd_to);
+
+	if (close(fd_fr) == -1)
+		exit_error(100, av, fd_fr);
 
 	return (0);
 }
