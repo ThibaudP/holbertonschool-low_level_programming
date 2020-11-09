@@ -40,8 +40,8 @@ void exit_error(int code, char **av, int fd)
 int main(int ac, char **av)
 {
 	char buf[1024];
-	int fd_fr = 0, fd_to = 0;
-	ssize_t wr_sta = 0, rd_len = 0;
+	int fd_fr, fd_to;
+	ssize_t wr_sta, rd_len;
 
 	if (ac != 3)
 		exit_error(97, av, 0);
