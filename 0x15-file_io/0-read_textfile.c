@@ -30,6 +30,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	len = read(fd, buf, letters);
+	if (len < 0)
+		return (0);
 
 	sta = write(1, buf, len);
 
