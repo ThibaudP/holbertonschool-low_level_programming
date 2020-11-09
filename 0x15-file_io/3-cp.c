@@ -40,7 +40,7 @@ void exit_error(int code, char **av, int fd)
 int main(int ac, char **av)
 {
 	char buf[1024];
-	int fd_fr = 0, fd_to = 0, clo_sta = 0;
+	int fd_fr = 0, fd_to = 0;
 	ssize_t wr_sta = 0, rd_len = 0;
 
 	if (ac != 3)
@@ -52,20 +52,21 @@ int main(int ac, char **av)
 		fd_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 		if (fd_to != -1)
 		{
-			while ((rd_len = read(fd_fr, buf, 1024)) > 0)
+			while ((rd_len = read(fd_fr, buf, 1024)) != 0)
 			{
 				wr_sta = write(fd_to, buf, rd_len);
+
+				if (rd_len == -1)
+					exit_error(98, av, 0);
+
 				if (wr_sta == -1 || wr_sta != rd_len)
 					exit_error(99, av, 0);
 			}
-			clo_sta = close(fd_to);
-			if (clo_sta == -1)
+			if (close(fd_to) == -1)
 				exit_error(100, av, fd_to);
 		}
-		else
-			exit_error(98, av, 0);
-		clo_sta = close(fd_fr);
-		if (clo_sta == -1)
+
+		if (close(fd_fr) == -1)
 			exit_error(100, av, fd_fr);
 	}
 
