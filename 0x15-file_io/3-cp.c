@@ -13,7 +13,7 @@ void exit_error(int code, char **av, int fd)
 	switch (code)
 	{
 		case 97:
-			dprintf(STDERR_FILENO, "Usage: file_from file_to\n");
+			dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 			break;
 		case 98:
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
@@ -53,7 +53,7 @@ int main(int ac, char **av)
 	fd_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd_to == -1)
 		exit_error(99, av, 0);
-	
+
 	while ((rd_len = read(fd_fr, buf, 1024)) != 0)
 	{
 		if (rd_len == -1)
@@ -64,7 +64,7 @@ int main(int ac, char **av)
 		if (wr_sta == -1 || wr_sta != rd_len)
 			exit_error(99, av, 0);
 	}
-	
+
 	if (close(fd_to) == -1)
 		exit_error(100, av, fd_to);
 
