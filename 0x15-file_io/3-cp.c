@@ -54,10 +54,10 @@ int main(int ac, char **av)
 		{
 			while ((rd_len = read(fd_fr, buf, 1024)) != 0)
 			{
-				wr_sta = write(fd_to, buf, rd_len);
-
 				if (rd_len == -1)
 					exit_error(98, av, 0);
+
+				wr_sta = write(fd_to, buf, rd_len);
 
 				if (wr_sta == -1 || wr_sta != rd_len)
 					exit_error(99, av, 0);
