@@ -6,7 +6,7 @@
  * @head: head node to the list
  * @idx: index of new node
  *
- * Return: 1 if success, -1 if failure 
+ * Return: 1 if success, -1 if failure
  */
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int idx)
@@ -16,27 +16,30 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int idx)
 
 	if (*head == NULL)
 		return (1);
-	else
-	{
-		while (cur && cnt != idx)
-		{
-			cur = cur->next;
-			cnt++;
-		}
-		if (cur && cnt == idx)
-		{
-			if (cur->prev && cur->next)
-			{
-				cur->prev->next = cur->next;
-				cur->next->prev = cur->prev;
-			}
-			else if (cur->prev && !(cur->next))
-				cur->prev->next = NULL;
-			else if (!(cur->prev) && cur->next)
-				cur->next->prev = NULL;
 
-			free(cur);
+	while (cur && cnt != idx)
+	{
+		cur = cur->next;
+		cnt++;
+	}
+
+	if (cur && cnt == idx)
+	{
+		if (cur->prev && cur->next)
+		{
+			cur->prev->next = cur->next;
+			cur->next->prev = cur->prev;
 		}
+		else if (cur->prev && !cur->next)
+			cur->prev->next = NULL;
+		else if (!cur->prev && cur->next)
+		{
+			cur->next->prev = NULL;
+			*head = cur->next;
+		}
+		else if (!cur->next && !cur->prev)
+			*head = NULL;
+		free(cur);
 	}
 
 	return (-1);
