@@ -5,7 +5,7 @@
  *
  * @head: head node to the list
  *
- * Return: the sum of all data in the linked list 
+ * Return: the sum of all data in the linked list
  */
 
 int sum_dlistint(dlistint_t *head)
