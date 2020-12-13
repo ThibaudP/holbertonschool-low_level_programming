@@ -39,9 +39,10 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int idx)
 	if (*head == NULL)
 		return (1);
 
-	if (idx > list_len(*head))
+/*
+   if (idx > list_len(*head))
 		return (1);
-
+*/
 	while (cur && cnt != idx)
 	{
 		cur = cur->next;
