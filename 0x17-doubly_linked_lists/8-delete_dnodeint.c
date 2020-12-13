@@ -21,7 +21,6 @@ size_t list_len(dlistint_t *h)
 	return (cnt);
 }
 
-
 /**
  * delete_dnodeint_at_index - deletes a node at requested index
  *
