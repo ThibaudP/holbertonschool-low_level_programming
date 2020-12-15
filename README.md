@@ -5,7 +5,7 @@
 This repo contains all code relating to the Holberton School foundations low-level programming curriculum.
 Each subfolder of this repo contains one singular project comprised of multiple tasks, with files related to a specific task usually (but not always) starting with the # of that task.
 
-## Project list
+## Projects list
 * **[0x00-hello_world](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x00-hello_world)**: Intro to C language, compilation & hello world
 * **[0x01-variables_if_else_while](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x01-variables_if_else_while)**: Intro to variables, conditions and loops
 * **[0x02-functions_nested_loops](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x02-functions_nested_loops)**: Intro to functions and nested loops
