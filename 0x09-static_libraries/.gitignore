@@ -1,0 +1,8 @@
+test*
+a.out
+_putchar.c
+*main.c
+*.bak
+*.c
+*.o
+liball.a
