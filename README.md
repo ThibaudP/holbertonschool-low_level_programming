@@ -23,7 +23,7 @@ Each subfolder of this repo contains one singular project comprised of multiple 
 * **[0x0E-structures_typedef](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x0E-structures_typedef)**: Intro to structures and type definition
 * **[0x0F-function_pointers](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x0F-function_pointers)**: Intro to function pointers
 * **[0x10-variadic_functions](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x10-variadic_functions)**: Intro to variadic functions
-* **_[0x11-printf](https://github.com/pforciol/printf/tree/main) (pair project)_**: Recreate printf() from scratch
+* **_[0x11-printf](https://github.com/ThibaudP/printf/tree/main) (pair project)_**: Recreate printf() from scratch
 * **[0x12-singly_linked_lists](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x12-singly_linked_lists)**: Intro to (singly) linked lists
 * **[0x13-more_singly_linked_lists](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x13-more_singly_linked_lists)**: Linked lists manipulation & allocation
 * **[0x14-bit_manipulation](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x14-bit_manipulation)**: Intro to bitwise operations
