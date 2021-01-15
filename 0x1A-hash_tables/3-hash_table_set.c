@@ -13,7 +13,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int idx = 0;
 
-	if (!key || !strlen(key))
+	if (!key || strlen(key) == 0)
 		return (0);
 	if (ht)
 	{
@@ -37,19 +37,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 hash_node_t *add_update_node(
 	hash_node_t **head, const char *key, const char *value)
 {
-	hash_node_t *node = *head;
 	hash_node_t *new_node = NULL;
-
-	while (node)
-	{
-		if (!strcmp(key, node->key))
-		{
-			free(node->value);
-			node->value = strdup(value);
-			return (node);
-		}
-		node = node->next;
-	}
+	
 
 	new_node = malloc(sizeof(hash_node_t));
 	if (new_node == NULL)
