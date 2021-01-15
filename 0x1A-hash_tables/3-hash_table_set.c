@@ -18,7 +18,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht)
 	{
 		idx = key_index((unsigned char *)key, ht->size);
-		if (!add_node(&(ht->array[idx]), key, value))
+		if (!add_update_node(&(ht->array[idx]), key, value))
 			return (0);
 	}
 
@@ -26,7 +26,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 }
 
 /**
- * add_node - adds a node at the beginning of a linked list
+ * add_update_node - adds or updates a node
  *
  * @head: pointer to head of the list
  * @key: key
@@ -35,18 +35,30 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
  * Return: address of new node, or NULL if failure
  */
 
-hash_node_t *add_node(hash_node_t **head, const char *key, const char *value)
+hash_node_t *add_update_node(hash_node_t **head, const char *key, const char *value)
 {
-	hash_node_t *node = NULL;
+	hash_node_t *node = *head;
+	hash_node_t *new_node = NULL;
 
-	node = malloc(sizeof(hash_node_t));
-	if (node == NULL)
+	while (node)
+	{
+		if (!strcmp(key, node->key))
+		{
+			free(node->value);
+			node->value = strdup(value);
+			return (node);
+		}
+		node = node->next;
+	}
+
+	new_node = malloc(sizeof(hash_node_t));
+	if (new_node == NULL)
 		return (NULL);
 
-	node->key = strdup(key);
-	node->value = strdup(value);
-	node->next = *head;
-	*head = node;
+	new_node->key = strdup(key);
+	new_node->value = strdup(value);
+	new_node->next = *head;
+	*head = new_node;
 
-	return (node);
+	return (new_node);
 }
