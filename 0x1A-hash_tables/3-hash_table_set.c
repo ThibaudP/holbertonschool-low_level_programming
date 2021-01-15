@@ -35,7 +35,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
  * Return: address of new node, or NULL if failure
  */
 
-hash_node_t *add_update_node(hash_node_t **head, const char *key, const char *value)
+hash_node_t *add_update_node(
+	hash_node_t **head, const char *key, const char *value)
 {
 	hash_node_t *node = *head;
 	hash_node_t *new_node = NULL;
