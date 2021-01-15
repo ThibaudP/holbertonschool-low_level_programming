@@ -13,7 +13,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int idx = 0;
 
-	if (!key && !strlen(key))
+	if (!key || !strlen(key))
 		return (0);
 	if (ht)
 	{
@@ -21,7 +21,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (!add_update_node(&(ht->array[idx]), key, value))
 			return (0);
 	}
-
 	return (1);
 }
 
