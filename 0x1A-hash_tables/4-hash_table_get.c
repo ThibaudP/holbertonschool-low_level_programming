@@ -18,7 +18,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	if (ht && ht->size)
 	{
 		idx = key_index((unsigned char *)key, ht->size);
-		node = get_node_from_key(ht->array[idx], key)
+		node = get_node_from_key(ht->array[idx], key);
 		if (node)
 			return (node->value);
 	}
