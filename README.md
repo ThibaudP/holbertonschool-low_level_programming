@@ -31,3 +31,4 @@ Each subfolder of this repo contains one singular project comprised of multiple 
 * **_[0x16-simple_shell](https://github.com/ThibaudP/simple_shell/tree/main) (pair project)_**: Recreate a simple shell from scratch
 * **[0x17-doubly_linked_lists](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x17-doubly_linked_lists)**: Intro to (doubly) linked lists
 * **[0x18-dynamic_libraries](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x18-dynamic_libraries)**: Intro to dynamic libraries (creation & use)
+* **[0x1A-hash_tables](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x1A-hash_tables)**: Intro to hash tables
