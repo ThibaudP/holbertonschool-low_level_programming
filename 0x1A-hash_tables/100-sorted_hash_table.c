@@ -116,7 +116,7 @@ shash_node_t *sinsert_node(shash_table_t *ht, shash_node_t *new)
 		ht->shead = new;
 		ht->stail = new;
 	}
-	else if (strcmp(new->key, ht->shead->key) <= 0)
+	else if (strcmp(new->key, ht->shead->key) <= 0 && new != ht->shead)
 	{
 		new->snext = ht->shead;
 		new->snext->sprev = new;
@@ -126,9 +126,9 @@ shash_node_t *sinsert_node(shash_table_t *ht, shash_node_t *new)
 	{
 		head = ht->shead;
 		while (head->snext && strcmp(new->key, head->snext->key) > 0)
-		{
 			head = head->snext;
-		}
+		if (new == head || new == head->snext)
+			return (new);
 		new->snext = head->snext;
 		new->sprev = head;
 		tmp = head->snext;
@@ -204,10 +204,9 @@ void shash_table_print(const shash_table_t *ht)
 	if (ht)
 	{
 		printf("{");
-		while (node)
+		while (node && cnt < 15)
 		{
 			printf("%s", cnt == 0 ? "" : ", ");
-			cnt = 1;
 			printf("'%s': '%s'", node->key, node->value);
 			node = node->snext;
 			cnt++;
@@ -235,7 +234,6 @@ void shash_table_print_rev(const shash_table_t *ht)
 			cnt = 1;
 			printf("'%s': '%s'", node->key, node->value);
 			node = node->sprev;
-			cnt++;
 		}
 		printf("}\n");
 	}
