@@ -23,9 +23,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 
 	return (1);
-
 }
-
 
 /**
  * add_node - adds a node at the beginning of a linked list
