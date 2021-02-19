@@ -23,12 +23,15 @@ Each subfolder of this repo contains one singular project comprised of multiple 
 * **[0x0E-structures_typedef](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x0E-structures_typedef)**: Intro to structures and type definition
 * **[0x0F-function_pointers](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x0F-function_pointers)**: Intro to function pointers
 * **[0x10-variadic_functions](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x10-variadic_functions)**: Intro to variadic functions
-* **_[0x11-printf](https://github.com/ThibaudP/printf/tree/main) (pair project)_**: Recreate printf() from scratch
+* **[0x11-printf](https://github.com/ThibaudP/printf/tree/main)**: Recreate printf() from scratch
 * **[0x12-singly_linked_lists](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x12-singly_linked_lists)**: Intro to (singly) linked lists
 * **[0x13-more_singly_linked_lists](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x13-more_singly_linked_lists)**: Linked lists manipulation & allocation
 * **[0x14-bit_manipulation](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x14-bit_manipulation)**: Intro to bitwise operations
 * **[0x15-file_io](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x15-file_io)**: Intro to file management and I/O
-* **_[0x16-simple_shell](https://github.com/ThibaudP/simple_shell/tree/main) (pair project)_**: Recreate a simple shell from scratch
+* **[0x16-simple_shell](https://github.com/ThibaudP/simple_shell/tree/main)**: Recreate a simple shell from scratch
 * **[0x17-doubly_linked_lists](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x17-doubly_linked_lists)**: Intro to (doubly) linked lists
 * **[0x18-dynamic_libraries](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x18-dynamic_libraries)**: Intro to dynamic libraries (creation & use)
+* **[0x19-monty](https://github.com/ThibaudP/monty)**: Intro to Stacks, Queues, LIFO/FIFO
 * **[0x1A-hash_tables](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x1A-hash_tables)**: Intro to hash tables
+* **[0x1B-sorting_algorithms](https://github.com/ThibaudP/sorting_algorithms)**: Sorting Algorithms
+* **[0x1C-makefiles](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x1A-hash_tables)**: Intro to makefiles

@@ -1,4 +1,4 @@
-# 0x11-hash_tables
+# 0x1A-hash_tables
 Intro to hash tables
 
 ## Learning Objectives
