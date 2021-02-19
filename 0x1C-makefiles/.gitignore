@@ -7,3 +7,5 @@ _putchar.c
 m.h
 holberton.c
 holberton
+main.py
+__pycache__
