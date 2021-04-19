@@ -35,3 +35,5 @@ Each subfolder of this repo contains one singular project comprised of multiple 
 * **[0x1A-hash_tables](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x1A-hash_tables)**: Intro to hash tables
 * **[0x1B-sorting_algorithms](https://github.com/ThibaudP/sorting_algorithms)**: Sorting Algorithms
 * **[0x1C-makefiles](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x1A-hash_tables)**: Intro to makefiles
+* **[0x1D-binary_trees](https://github.com/ThibaudP/binary_trees)**: Intro to makefiles
+* **[0x1E-search_algorithms](https://github.com/ThibaudP/holbertonschool-low_level_programming/tree/main/0x1E-search_algorithms)**: Search algorithms and space complexity
