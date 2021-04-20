@@ -1,30 +1,6 @@
 #include "search_algos.h"
 
 /**
- * print_array - prints a subarray (from start to end passed as args)
- *
- * @array: the array to print
- * @start: start index of subarray
- * @end: end index of subarray
- *
- **/
-
-void print_array(int *array, size_t start, size_t end)
-{
-	size_t i = start;
-
-	printf("Searching in array: ");
-	while (i <= end)
-	{
-		printf("%d", array[i]);
-		if (i != end)
-			printf(", ");
-		i++;
-	}
-	printf("\n");
-}
-
-/**
  * recursive_binary - recursive part of the binary search
  *
  * @array: the array to search in
@@ -37,12 +13,22 @@ void print_array(int *array, size_t start, size_t end)
 
 int recursive_binary(int *array, size_t start, size_t end, int value)
 {
-	size_t mid;
+	size_t mid, i;
 
-	mid = start + (end - start) / 2;
-	print_array(array, start, end);
+	mid = (start + end) / 2;
+	i = start;
+	
+	printf("Searching in array: ");
+	while (i <= end)
+	{
+		printf("%d", array[i]);
+		if (i != end)
+			printf(", ");
+		i++;
+	}
+	printf("\n");
 
-	if (start != mid &&value == array[mid])
+	if (start != mid && value == array[mid])
 		return (recursive_binary(array, start, mid, value));
 	else if (value == array[mid])
 		return (mid);
