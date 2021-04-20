@@ -14,17 +14,20 @@ int binary_search(int *array, size_t size, int value)
 {
 	size_t mid, start = 0, end = size - 1;
 
-	while (start <= end)
+	if (array)
 	{
-		mid = start + (end - start) / 2;
-		print_array(array, start, end);
-		if (array[mid] == value)
-			return (mid);
+		while (start <= end)
+		{
+			mid = start + (end - start) / 2;
+			print_array(array, start, end);
+			if (array[mid] == value)
+				return (mid);
 
-		if (value > array[mid])
-			start = mid + 1;
-		else
-			end = mid - 1;
+			if (value > array[mid])
+				start = mid + 1;
+			else
+				end = mid - 1;
+		}
 	}
 	return (-1);
 }
