@@ -42,7 +42,7 @@ int recursive_binary(int *array, size_t start, size_t end, int value)
 	mid = start + (end - start) / 2;
 	print_array(array, start, end);
 
-	if (value == array[mid] && start != mid)
+	if (start != mid &&value == array[mid])
 		return (recursive_binary(array, start, mid, value));
 	else if (value == array[mid])
 		return (mid);
@@ -70,7 +70,7 @@ int advanced_binary(int *array, size_t size, int value)
 {
 	size_t start = 0, end = size - 1;
 
-	if (array)
+	if (array && size > 0)
 		return (recursive_binary(array, start, end, value));
 	return (-1);
 }
