@@ -28,16 +28,15 @@ int recursive_binary(int *array, size_t start, size_t end, int value)
 	}
 	printf("\n");
 
-	if (start != mid && value == array[mid])
-		return (recursive_binary(array, start, mid, value));
-	else if (value == array[mid])
+	
+	if (value == array[mid] && array[mid - 1] != value)
 		return (mid);
 	else if (start >= end)
 		return (-1);
 	else if (value > array[mid])
 		return (recursive_binary(array, mid + 1, end, value));
-	else if (value < array[mid])
-		return (recursive_binary(array, start, mid - 1, value));
+	else if (value <= array[mid])
+		return (recursive_binary(array, start, mid, value));
 
 	return (-1);
 }
