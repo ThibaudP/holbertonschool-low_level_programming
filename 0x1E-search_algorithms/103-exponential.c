@@ -26,10 +26,10 @@ void print_array(int *array, size_t start, size_t end)
 
 /**
  * minval - finds the minimum value
- * 
+ *
  * @a: first value
  * @b: second value
- * 
+ *
  * Return: the lowest of the two values
  **/
 
@@ -44,7 +44,8 @@ size_t minval(size_t a, size_t b)
  * _binary_search - binary search algorithm
  *
  * @array: the array to search in
- * @size: number of elements in the array
+ * @start: start index
+ * @end: end index
  * @value: value to search for
  *
  * Return: the first index where value is located if found, -1 if not found
@@ -97,7 +98,6 @@ int exponential_search(int *array, size_t size, int value)
 
 	printf("Value found between indexes [%lu] and [%lu]\n", bound / 2,
 	       minval(bound, size - 1));
-	       
-	return (_binary_search(array, bound / 2, minval(bound, size - 1), value));
 
+	return (_binary_search(array, bound / 2, minval(bound, size - 1), value));
 }
